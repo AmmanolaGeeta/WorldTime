@@ -13,14 +13,15 @@ class _HomeState extends State<Home> {
   Widget build(BuildContext context) {
     // data = ModalRoute.of(context)!.settings.arguments as Map;
     data = data.isNotEmpty? data: ModalRoute.of(context)!.settings.arguments as Map;
-
     print(data);
 
     //  set background based on day and night
     String bgImage = data['isDayTime']? 'day.jpg':'night.jpg';
-    Color bgColor =  data['isDayTime']? Colors.blue: Colors.indigo;
+    Color bgColor =  data['isDayTime']? Colors.lightBlue.shade900: Colors.indigo.shade900 ;
     return Scaffold(
+      backgroundColor:bgColor,
     body: SafeArea(
+
         child: Container(
            decoration:BoxDecoration(
               image: DecorationImage(
@@ -75,14 +76,14 @@ class _HomeState extends State<Home> {
       style: TextStyle(
         color:Colors.grey[300],
         fontSize:66.0,
-      )
-    )
-            ],
-          ),
         )
+      )
+              ],
+            ),
+          )
 
-    ),
-    ),
-    );
+      ),
+      ),
+      );
+    }
   }
-}

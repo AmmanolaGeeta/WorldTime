@@ -41,9 +41,10 @@ Navigator.pop(context, {
       backgroundColor: Colors.grey[200],
       appBar: AppBar(
         backgroundColor: Colors.blue[900],
+        foregroundColor:Colors.white,
         title:Text( 'Choose a Location'),
           centerTitle: true,
-        elevation: 0.0,
+          elevation: 0.0,
       ),
 
 
@@ -59,7 +60,7 @@ Navigator.pop(context, {
                 },
                 title: Text(locations[index].location),
                 leading: CircleAvatar(
-                  backgroundImage: AssetImage('./../assets/${locations[index].flag}'),
+                  backgroundImage: AssetImage('assets/${locations[index].flag}'),
                 ),
               ),
             ),

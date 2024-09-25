@@ -9,7 +9,7 @@ import 'package:intl/intl.dart';
   String time=''; // time for that lacation
   String flag ; // assets flag icon
   String url; // location url for api endpoint
-  late bool  isDayTime; // true /false for daytime
+  late bool  isDayTime=false ; // true /false for daytime
 
   WorldTime({required this.location, required this.flag ,required this.url});
 
